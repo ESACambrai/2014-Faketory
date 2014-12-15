@@ -1,10 +1,4 @@
 # Faketory #
 
-**test**
-_jdhdhjdh_
+Dossier du projet **Faketory**.
 
-jhsjhs
-
-[ok](http://www.lien.com)
-
-![ok](img.png)
