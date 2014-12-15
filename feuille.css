@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* CSS Document */
+ table, tr, td{
+				margin: 0px;
+				padding:0px;
+				
+				margin-top:156px;
+				margin-left:180px;
+			}
+			div{
+				width: 15px;
+				height: 15px;
+			}
+			
+			
+
+.myP {
+	position: fixed;
+	top: 8%;
+	max-width: 254 px;
+	font-size: 3.5em;
+	text-align: center;
+	width: 320px;
+	height: 67px;
+	left: 13px;
+}
+
+.header {
+	position:fixed;
+	width:320px;
+	height:200px;
+	border: 5px solid #FF8000;
+	text-align:center;
+	z-index:-100;
+}
+
+#couleur {
+	position:fixed;
+	top: 0%;
+	left: 2%;	
+}
+
+#select {
+	position:fixed;
+	top: 23%;
+	left:5%;
+}
+
+.sidebar {
+	position:fixed;
+	top:223px;
+	width:320px;
+	height:433px;
+	border: 5px solid #FF8000;
+}
+
+.scrollplace {
+	position:absolute;
+	width:920px;
+	height:658px;
+	margin-left:335px;
+}
+
+.gif1 {
+	position:fixed;
+	display:block;
+	top:250px;
+	left:31px;
+}
+
+.gif2 {
+	position:fixed;
+	display:block;
+	top:456px;
+	left:31px;
+}
+
+.test {
+	position:absolute;
+	top:2000px;
+}

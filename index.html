@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>FAKE TORY</title>
+<link rel="stylesheet" type="text/css" href="feuille.css"/>
+
+<script language="javascript" type="text/javascript">
+			function changeBackgroundImage(elm){
+			window.status=elm.style.backgroundImage;
+				document.getElementById('header').style.backgroundImage=elm.style.backgroundImage;
+			}	
+		
+
+function changecolor(element){
+    if (element.innerHTML == " FAKETORY"){
+        element.innerHTML = "FAKETORY";
+        element.style.color = "black";
+    } else {
+		element.innerHTML = " FAKETORY";
+		
+        element.style.color = "white";
+    }
+    return false;
+}
+
+</script>
+
+
+        
+</head>
+
+<body>
+
+<a class="myP" id="myP" onClick="changecolor(this)" style="color: black;">FAKETORY</a>
+
+
+<div class="scrollplace">
+</div>
+
+<div id="header" class="header">
+</div>
+
+
+    
+<table width="44" height="21" id="couleur" >
+               
+                <tr>
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/or.jpg);"></div></td>
+                
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/marbre.jpg);"></div></td>
+               
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/bois.jpg);"></div></td>
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/bacon.jpg);"></div></td>
+                </tr>
+                
+                <tr>
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/vert.jpg);"></div></td>
+                
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/bleu.jpg);"></div></td>
+                
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/magenta.jpg);"></div></td>
+                <td width="10"><div onClick="javascript: changeBackgroundImage(this);" style="background-image:url(couleurs/jaune.jpg);"></div></td>
+                </tr>
+                
+</table>
+
+<FORM id="select" >
+    <SELECT name="typo" size="1">
+    <OPTION onClick="impact()">IMPACT
+    <OPTION onClick="comicsans()">COMIC
+    <OPTION onClick="couriernew()">COURIER NEW
+    <OPTION onClick="verdana()">VERDANA
+    <OPTION selected onClick="times()">TIMES
+    </SELECT>
+    </FORM>
+    
+    
+<script>
+function impact() {
+    document.getElementById("myP").style.fontFamily ="Impact";
+}
+function comicsans() {
+    document.getElementById("myP").style.fontFamily ="Comic Sans MS";
+}
+function couriernew() {
+    document.getElementById("myP").style.fontFamily ="Courier New";
+}
+function verdana() {
+    document.getElementById("myP").style.fontFamily ="Verdana";
+}
+function times() {
+    document.getElementById("myP").style.fontFamily ="Times New Roman";
+}
+</script>
+
+
+<div class="sidebar">
+</div>
+
+
+<img src="gif/prout.gif" width="283" height="180" class="gif2" id="gif2" />
+
+<img src="gif/popup2.gif" width="283" height="180" class="gif1" id="gif2"/>
+
+<div class="test">
+</div>
+
+</body>
+</html>
