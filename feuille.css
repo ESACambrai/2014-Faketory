@@ -1,48 +1,76 @@
 @charset "UTF-8";
 /* CSS Document */
 
-			
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
-#header {
+.sidebar{
 	position:fixed;
 	width:320px;
-	height:200px;
+}
+
+#header {
 	border: 5px solid #FF8000;
 	text-align:center;
-	z-index:-100;
+	z-index:2;
+	padding:15px; 
 }
 
-#myP {
-	max-width: 254px;
-	font-size: 3.5em;
+
+#header h1{
+	font-size: 3em;
 	text-align: center;
-	width: 320px;
-	height: 67px;
+	font-weight: normal;
+}
+
+#header h1 #myP {
 	color: #000;
+	cursor: pointer;
 }
 
 
-#couleur {
+#header #couleur {
 }
 
-#couleur div{
+#header #couleur div{
 	width: 15px;
 	height: 15px;
 }
-	
 
-#select {
+#header table{
+	margin: auto;
 }
 
 
 
-.sidebar {
-	position:fixed;
-	top:223px;
-	width:320px;
-	height:433px;
+.pub {
 	border: 5px solid #FF8000;
+	padding:15px; 
+	margin-top: 15px;
+}
+
+.pub img{
+	height: auto;
+	margin-bottom:15px;
+}
+
+/*
+.sidebar img+img{
+	border-top: solid 5px black;
+	padding-top:15px;
+}
+*/
+
+.sidebar img:last-child{
+	margin-bottom: 0;
 }
 
 .scrollplace {
@@ -52,13 +80,30 @@
 	margin-left:335px;
 }
 
-.gif1 {
+
+#content {
+	background: #F00;
+	margin-left:345px;
+	padding: 15px;
+	position: relative;
+	z-index: 1;
 }
 
-.gif2 {
+#content>*{
+	max-width: 700px;
 }
 
-.test {
-	position:absolute;
-	top:2000px;
+#content p{
+	margin: 0;
+}
+
+#content p+p{
+	margin-top: 1em;
+}
+
+#content p img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: auto;
 }
