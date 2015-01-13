@@ -55,11 +55,10 @@
 		</div>
 	</div>
 
-
 	<div id="content">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga natus adipisci facere mollitia atque quia ratione quae, ipsam beatae error doloremque minima, nemo molestias. Ea iure repudiandae eveniet vitae.</p>
 		<p>Minima obcaecati vitae accusantium fugiat nulla suscipit tempora. Tenetur esse blanditiis rerum quis incidunt, ea in veniam delectus! Labore, unde iusto ex minus voluptates atque numquam molestias rem! Beatae, iste.</p>
-		<p><img src="gif/popup2.gif"/></p>
+		<p><img src="gif/popup2.gif" id="gif1" class="gifimage"/></p>
 		<p>Debitis architecto, doloribus nam nobis non ratione asperiores vel! Unde corrupti eligendi dolorem, repellat delectus deserunt mollitia cupiditate minus, perspiciatis doloribus laudantium, blanditiis tenetur temporibus vitae, consectetur quidem modi illo.</p>
 		<p>Voluptatem consectetur provident, quaerat perferendis incidunt minus recusandae, et. Veniam tempore odio praesentium est, voluptatibus vero iste labore neque, quos quaerat sint autem id consequatur, perferendis ducimus voluptatum dolores, maiores?</p>
 		<p>Esse, eveniet, inventore. Laudantium ad expedita molestias, sit nulla magnam facere deserunt debitis incidunt eum. Quam beatae minus sint eius maiores, dolorem nostrum numquam quo aliquam ullam error quia. Consequuntur!</p>
@@ -72,6 +71,32 @@
 		<p>Laudantium dolorum libero eaque ullam mollitia molestiae. Ratione illum sed obcaecati commodi atque beatae officiis. Ducimus maiores natus optio recusandae sit. Quas, ipsa corporis inventore non sunt, laborum iste et?</p>
 		<p>Ut rerum, cumque repellendus accusamus. Dicta nihil quia error incidunt, at soluta, in nesciunt natus, eos iste sed, debitis ducimus. Cum cumque, magnam molestias quam repudiandae ab maiores inventore laborum.</p>
 		<p>Quasi delectus soluta quisquam, expedita eaque corporis vel fugit reiciendis itaque dicta consequuntur nisi voluptatem officiis dolorum, magni aperiam excepturi, alias repudiandae, similique non consectetur ratione accusantium. Sit quam, illo.</p>
+		<p><img src="gif/popup2.gif" id="gif2" class="gifimage"/></p>
+        <p><img src="gif/popup2.gif" id="gif3" class="gifimage"/></p>
+        <p><img src="gif/popup2.gif" id="gif4" class="gifimage"/></p>
+        <p></p><table width="200" border="1">
+  <tr>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+  </tr>
+  <tr>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+    <td><img src="gif/popup2.gif" id="gif2" class="gifimage"/></td>
+  </tr>
+</table>
+        <p id="end">END</p>
 		<p>Sequi reiciendis laboriosam temporibus suscipit omnis veniam fugiat incidunt, similique accusamus ullam minima praesentium facere perferendis expedita. Blanditiis sed totam ut fuga, consequuntur. Nihil libero minima consequuntur dolorem aliquid omnis.</p>
 		<p>Repellat ipsum molestiae quisquam maiores quod voluptate. Assumenda, quis. Id distinctio ducimus, nostrum aspernatur similique, obcaecati reiciendis nemo cumque laboriosam nisi exercitationem cupiditate quod quas aperiam eveniet unde ipsum perspiciatis.</p>
 		<p>Fugiat sit dignissimos, eos similique maxime quas, perspiciatis deserunt ipsum culpa modi quis laboriosam nostrum molestias, debitis repellat recusandae dolorum id cum officia iusto! Sunt nulla voluptas omnis, facere at!</p>
@@ -82,6 +107,8 @@
 
 
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
 <script>
 
 	// on vérifie que la page est prête
@@ -121,8 +148,47 @@
 		});
 
 		console.log("ok");
+		
+		
+		// using the event helper
+		/*$('body').mousewheel(function(event) {
+			console.log(event.deltaX, event.deltaY, event.deltaFactor);
+		
+		});*/
+
 
 	});
+	
+	
+
+	
+
+	var waypoints = $('.gifimage').waypoint(function(direction) {
+		//console.log(direction);
+		//console.log(this.element.id + ' hit 50% from top of window');
+		
+		console.log(  $(document).scrollTop() , $(this.element).offset() );
+		
+		var decalTop = parseInt($(this.element).offset().top) - parseInt($(document).scrollTop()) ;
+		var decalLeft = parseInt($(this.element).offset().left);
+		//console.log("decalTop " + decalTop);
+		
+		if(direction == "up"){
+			$(this.element).addClass("fixedTop");
+			$(this.element).css('top', decalTop );
+			$(this.element).css('left', decalLeft );
+		}else{
+			$(this.element).removeClass("fixedTop");
+			$(this.element).css('top','auto' );
+			$(this.element).css('left', 'auto' );
+		}
+		
+	}, {
+		offset: '50%'
+	});
+	
+
+
 
 </script>
 
