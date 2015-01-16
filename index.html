@@ -109,6 +109,7 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/konami.js"></script>
 <script>
 
 	// on vérifie que la page est prête
@@ -140,8 +141,6 @@
 			var r = Math.round(Math.random()*255);
 			var v = Math.round(Math.random()*255);
 			var b = Math.round(Math.random()*255);
-
-			console.log("rbg("+r+","+v+","+b+")");
 
 			$(this).css("color","rgb("+r+","+v+","+b+")");
 
@@ -186,12 +185,21 @@
 	}, {
 		offset: '50%'
 	});
-	
 
+var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],  
 
+n = 0;  
+
+$(document).keydown(function (e) {  
+    if (e.keyCode === k[n++]) {  
+        if (n === k.length) {  
+            location.href="konami.html";
+            return !1  
+        }  
+    } else k = 0 
+});
 
 </script>
-
 
 </body>
 </html>
